@@ -33,6 +33,7 @@
         width: 100%;
         height: auto;
         display: block;
+        padding: 20px;
       }
       h1,
       h2 {
@@ -110,8 +111,8 @@
   <body>
     <div class="container">
       <div class="banner">
-        <a href="https://hcmute.edu.vn/" target="_blank">
-          <img src="Logo HCMUTE Tagline 1_Stroke white.png" alt="Logo HCMUTE" />
+        <a href="https://fit.hcmute.edu.vn/" target="_blank">
+          <img src="HCMUTE-fit.png" alt="Logo HCMUTE" />
         </a>
       </div>
       <h1>Bài Trắc Nghiệm Chọn Chuyên Ngành CNTT</h1>
@@ -657,6 +658,7 @@
         let maxCount = 0;
         let recommendedMajor = "";
         let majorDescription = "";
+        let majorLink = "";
 
         // Find the most frequent choice
         for (const choice in choices) {
@@ -678,33 +680,57 @@
             majorResult = "Công nghệ Phần mềm (CNPM)";
             majorDescription =
               "Bạn có xu hướng phù hợp với việc phát triển ứng dụng, tạo ra sản phẩm cụ thể và sử dụng các công nghệ hiện đại. Bạn thích trực tiếp xây dựng và thấy kết quả công việc của mình.";
+            majorLink = "Software technology.html";
             break;
           case "b":
             majorResult = "Mạng và An ninh mạng";
             majorDescription =
               "Bạn hứng thú với hạ tầng, cách hệ thống vận hành, bảo mật và khả năng tối ưu hóa. Bạn quan tâm đến việc đảm bảo sự ổn định và an toàn cho các hệ thống công nghệ.";
+            majorLink = "Network and network security.html";
             break;
           case "c":
             majorResult = "Trí tuệ nhân tạo (TTNT)";
             majorDescription =
               "Bạn đam mê dữ liệu, thuật toán, mô hình học máy và muốn khám phá tiềm năng của AI. Bạn có khả năng kiên nhẫn làm việc với các tập dữ liệu lớn và tìm kiếm insight từ chúng.";
+            majorLink = "Artificial intelligence.html";
             break;
           case "d":
             majorResult = "Hệ thống Thông tin (HTTT)";
             majorDescription =
               "Bạn quan tâm đến việc tổ chức, quản lý và tối ưu hóa luồng thông tin trong các tổ chức, đảm bảo hiệu quả và tính toàn vẹn của dữ liệu. Bạn thích thiết kế và quản lý các cấu trúc thông tin.";
+            majorLink = "Information system.html";
             break;
           default:
             majorResult =
               "Không xác định rõ. Vui lòng thử lại hoặc xem xét các chuyên ngành kỹ hơn.";
             majorDescription = "";
+            majorLink = "";
             break;
         }
 
         document.getElementById("majorResult").textContent = majorResult;
         document.getElementById("majorDescription").textContent =
           majorDescription;
-        document.getElementById("resultContainer").style.display = "block"; // Show the result
+
+        // Update the result container HTML to include both links
+        const resultContainer = document.getElementById("resultContainer");
+        resultContainer.innerHTML = `
+          <h3>Chuyên ngành phù hợp với bạn là:</h3>
+          <p id="majorResult">${majorResult}</p>
+          <p id="majorDescription">${majorDescription}</p>
+          <p style="margin-top: 20px">
+            <a href="${majorLink}" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold">
+              → Xem thông tin chi tiết về chuyên ngành ${majorResult}
+            </a>
+          </p>
+          <p style="margin-top: 10px">
+            <a href="https://fit.hcmute.edu.vn/ArticleId/df646c13-b76f-444d-a1d1-95ccdfd50b47/" target="_blank" style="color: #2980b9; text-decoration: none; font-weight: bold">
+              → Xem thông tin chi tiết chương trình đào tạo chuyên ngành CNTT
+            </a>
+          </p>
+        `;
+
+        resultContainer.style.display = "block"; // Show the result
         document
           .getElementById("quizForm")
           .scrollIntoView({ behavior: "smooth", block: "end" }); // Scroll to result

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Logo HCMUTE_Stroke white.png" />
+    <title>Chương Trình Đào Tạo - CNTT (Chuyên ngành Mạng và An ninh mạng)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .banner {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 40px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h3 {
+            margin-top: 30px;
+            color: #34495e;
+            text-align: left;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        td:nth-child(1) { width: 10%; } /* STT/Mã môn học */
+        td:nth-child(2) { width: 50%; } /* Tên học phần */
+        td:nth-child(3) { width: 15%; text-align: center; } /* Số tín chỉ */
+        td:nth-child(4) { width: 25%; } /* Ghi chú/Mã MH trước */
+        .note {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #eaf3f8;
+            border-left: 5px solid #3498db;
+        }
+        .total-credits {
+            font-weight: bold;
+            text-align: right;
+            padding-top: 15px;
+            font-size: 1.1em;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <a href="https://fit.hcmute.edu.vn/" target="_blank">
+                <img src="HCMUTE-fit.png" alt="Logo HCMUTE" />
+            </a>
+        </div>
+        <h1>CHƯƠNG TRÌNH ĐÀO TẠO</h1>
+        <h2>NGÀNH CÔNG NGHỆ THÔNG TIN - CHUYÊN NGÀNH MẠNG VÀ AN NINH MẠNG</h2>
+        <p style="text-align: center; font-style: italic;">(Tổng cộng: 150 Tín chỉ)</p>
+
+        <div class="note">
+            <p><strong>Lưu ý:</strong> 150 Tín chỉ này không bao gồm khối kiến thức Ngoại ngữ, Giáo dục thể chất và Giáo dục Quốc phòng.</p>
+            <p>Sinh viên cần đạt thêm 02 học phần ngoại ngữ (không tính vào 150 tín chỉ):</p>
+            <ul>
+                <li>Kỹ năng giao tiếp tiếng Anh 1 (ENCS140026) - 4 Tín chỉ [cite: 19]</li>
+                <li>Kỹ năng giao tiếp tiếng Anh 2 (ENCS240026) - 4 Tín chỉ [cite: 19]</li>
+            </ul>
+        </div>
+
+        <h2>A. KIẾN THỨC GIÁO DỤC ĐẠI CƯƠNG (51 Tín chỉ)</h2>
+
+        <h3>I. Khối kiến thức bắt buộc (47 Tín chỉ)</h3>
+        <h4>1. Lý luận chính trị + Pháp luật + Tiếng Anh (16 Tín chỉ)</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã môn học</th>
+                    <th>Tên học phần</th>
+                    <th>Số tín chỉ</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>LLCT120205</td>
+                    <td>Kinh tế chính trị Mác – Lênin</td>
+                    <td>2</td>
+                    <td>[cite: 24]</td>
+                </tr>
+                <tr>
+                    <td>LLCT130105</td>
+                    <td>Triết học Mác – Lênin</td>
+                    <td>3</td>
+                    <td>[cite: 24]</td>
+                </tr>
+                <tr>
+                    <td>LLCT120314</td>
+                    <td>Tư tưởng Hồ Chí Minh</td>
+                    <td>2</td>
+                    <td>[cite: 24]</td>
+                </tr>
+                <tr>
+                    <td>LLCT120405</td>
+                    <td>Chủ nghĩa xã hội khoa học</td>
+                    <td>2</td>
+                    <td>[cite: 24]</td>
+                </tr>
+                <tr>
+                    <td>LLCT220514</td>
+                    <td>Lịch sử Đảng CSVN</td>
+                    <td>2</td>
+                    <td>[cite: 24]</td>
+                </tr>
+                <tr>
+                    <td>GELA220405</td>
+                    <td>Pháp luật đại cương</td>
+                    <td>2</td>
+                    <td>[cite: 24]</td>
+                </tr>
+                <tr>
+                    <td>ENCS330537</td>
+                    <td>Tiếng Anh Chuyên ngành Khoa học Máy tính</td>
+                    <td>3</td>
+                    <td>[cite: 24]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>2. Toán học và KHTN (21 Tín chỉ)</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã môn học</th>
+                    <th>Tên học phần</th>
+                    <th>Số tín chỉ</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MATH132401</td>
+                    <td>Toán 1</td>
+                    <td>3</td>
+                    <td>[cite: 26]</td>
+                </tr>
+                <tr>
+                    <td>MATH132501</td>
+                    <td>Toán 2</td>
+                    <td>3</td>
+                    <td>[cite: 26]</td>
+                </tr>
+                <tr>
+                    <td>MATH143001</td>
+                    <td>Đại số và cấu trúc đại số</td>
+                    <td>4</td>
+                    <td>[cite: 26]</td>
+                </tr>
+                <tr>
+                    <td>MATH132901</td>
+                    <td>Xác suất thống kê ứng dụng</td>
+                    <td>3</td>
+                    <td>[cite: 26]</td>
+                </tr>
+                <tr>
+                    <td>PHYS130902</td>
+                    <td>Vật lý 1</td>
+                    <td>3</td>
+                    <td>[cite: 26]</td>
+                </tr>
+                <tr>
+                    <td>PHYS 111202</td>
+                    <td>Thí nghiệm vật lý 1</td>
+                    <td>1</td>
+                    <td>[cite: 26]</td>
+                </tr>
+                <tr>
+                    <td>EEEN234162</td>
+                    <td>Điện tử căn bản</td>
+                    <td>3</td>
+                    <td>[cite: 26]</td>
+                </tr>
+                <tr>
+                    <td>PRBE214262</td>
+                    <td>Thực tập điện tử căn bản</td>
+                    <td>1</td>
+                    <td>[cite: 26]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>3. Nhập môn ngành CNTT (3 Tín chỉ)</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã môn học</th>
+                    <th>Tên học phần</th>
+                    <th>Số tín chỉ</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>INIT130185</td>
+                    <td>Nhập môn ngành CNTT</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 26]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>4. Tin học (7 Tín chỉ)</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã môn học</th>
+                    <th>Tên học phần</th>
+                    <th>Số tín chỉ</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>INPR140285</td>
+                    <td>Nhập môn lập trình</td>
+                    <td>4 (3+1)</td>
+                    <td>[cite: 26]</td>
+                </tr>
+                <tr>
+                    <td>PRTE230385</td>
+                    <td>Kỹ thuật lập trình</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 26]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>II. Khối kiến thức tự chọn (Đại cương) (chọn 2 môn, 4 Tín chỉ)</h3>
+        <p><em>(Lựa chọn tối ưu cho chuyên ngành Mạng và An ninh mạng)</em></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã môn học</th>
+                    <th>Tên học phần</th>
+                    <th>Số tín chỉ</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SYTH220491</td>
+                    <td>Tư duy hệ thống</td>
+                    <td>2</td>
+                    <td>Giúp rèn luyện tư duy tổng thể về hệ thống mạng và bảo mật. [cite: 22, 40]</td>
+                </tr>
+                <tr>
+                    <td>REME320690</td>
+                    <td>Phương pháp nghiên cứu khoa học</td>
+                    <td>2</td>
+                    <td>Hữu ích cho các đồ án, khóa luận và phân tích sự cố bảo mật. [cite: 22, 40]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>B. KHỐI KIẾN THỨC CHUYÊN NGHIỆP (99 Tín chỉ)</h2>
+
+        <h3>I. Kiến thức cơ sở nhóm ngành và ngành (50 Tín chỉ)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã môn học</th>
+                    <th>Tên học phần</th>
+                    <th>Số tín chỉ</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>DIGR240485</td>
+                    <td>Toán rời rạc và lý thuyết đồ thị</td>
+                    <td>4 (3+1)</td>
+                    <td>[cite: 28]</td>
+                </tr>
+                <tr>
+                    <td>DASA230179</td>
+                    <td>Cấu trúc dữ liệu và giải thuật</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 28]</td>
+                </tr>
+                <tr>
+                    <td>OOPR230279</td>
+                    <td>Lập trình hướng đối tượng</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 28]</td>
+                </tr>
+                <tr>
+                    <td>WIPR230579</td>
+                    <td>Lập trình trên Windows</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 28]</td>
+                </tr>
+                <tr>
+                    <td>INSE330380</td>
+                    <td>An toàn thông tin</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 28]</td>
+                </tr>
+                <tr>
+                    <td>WEPR330479</td>
+                    <td>Lập trình Web</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 28]</td>
+                </tr>
+                <tr>
+                    <td>SOEN330679</td>
+                    <td>Công nghệ phần mềm</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 28]</td>
+                </tr>
+                <tr>
+                    <td>CAAL230180</td>
+                    <td>Kiến trúc máy tính và hợp ngữ</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 28]</td>
+                </tr>
+                <tr>
+                    <td>OPSY330280</td>
+                    <td>Hệ điều hành</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 28]</td>
+                </tr>
+                <tr>
+                    <td>NEES330380</td>
+                    <td>Mạng máy tính căn bản</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 28]</td>
+                </tr>
+                <tr>
+                    <td>DBSY240184</td>
+                    <td>Cơ sở dữ liệu</td>
+                    <td>4 (3+1)</td>
+                    <td>[cite: 28]</td>
+                </tr>
+                <tr>
+                    <td>DBMS330284</td>
+                    <td>Hệ quản trị cơ sở dữ liệu</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 28]</td>
+                </tr>
+                <tr>
+                    <td>ARIN330585</td>
+                    <td>Trí tuệ nhân tạo</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 30]</td>
+                </tr>
+                <tr>
+                    <td>IPPA233277</td>
+                    <td>Lập trình Python</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 30]</td>
+                </tr>
+                <tr>
+                    <td>INOT231780</td>
+                    <td>Vạn Vật Kết Nối</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 30]</td>
+                </tr>
+                <tr>
+                    <td>MALE431984</td>
+                    <td>Học máy</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 30]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>II. Kiến thức chuyên ngành BẮT BUỘC (Chuyên ngành Mạng và An ninh mạng) (20 Tín chỉ)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã môn học</th>
+                    <th>Tên học phần</th>
+                    <th>Số tín chỉ</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>NPRO430980</td>
+                    <td>Lập trình mạng</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 32]</td>
+                </tr>
+                <tr>
+                    <td>ADNT330580</td>
+                    <td>Mạng máy tính nâng cao</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 32]</td>
+                </tr>
+                <tr>
+                    <td>ETHA332080</td>
+                    <td>Tấn công mạng và phòng thủ</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 32]</td>
+                </tr>
+                <tr>
+                    <td>CNDE430780</td>
+                    <td>Thiết kế mạng</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 32]</td>
+                </tr>
+                <tr>
+                    <td>NSEC430880</td>
+                    <td>An ninh mạng</td>
+                    <td>3 (2+1)</td>
+                    <td>[cite: 32]</td>
+                </tr>
+                <tr>
+                    <td>POCN451280</td>
+                    <td>Tiểu luận chuyên ngành Mạng và an ninh mạng</td>
+                    <td>5</td>
+                    <td>[cite: 32]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>III. Kiến thức Thực tập (4 Tín chỉ)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã môn học</th>
+                    <th>Tên học phần</th>
+                    <th>Số tín chỉ</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ITIN421085</td>
+                    <td>Thực tập tốt nghiệp (CNTT)</td>
+                    <td>2</td>
+                    <td>[cite: 36]</td>
+                </tr>
+                <tr>
+                    <td>ITEN420885</td>
+                    <td>Chuyên đề doanh nghiệp (CNTT)</td>
+                    <td>2</td>
+                    <td>[cite: 36]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>IV. Tốt nghiệp (10 Tín chỉ)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã môn học</th>
+                    <th>Tên học phần</th>
+                    <th>Số tín chỉ</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GRPR401979</td>
+                    <td>Khóa luận tốt nghiệp</td>
+                    <td>10</td>
+                    <td>[cite: 38]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>V. Kiến thức giáo dục chuyên nghiệp tự chọn (chọn 3 môn, 9 Tín chỉ)</h3>
+        <p><em>(Lựa chọn tối ưu cho chuyên ngành Mạng và An ninh mạng)</em></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã môn học</th>
+                    <th>Tên học phần</th>
+                    <th>Số tín chỉ</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CLCO332779</td>
+                    <td>Điện toán đám mây</td>
+                    <td>3 (2+1)</td>
+                    <td>Nền tảng quan trọng cho mạng và bảo mật trên cloud. [cite: 43]</td>
+                </tr>
+                <tr>
+                    <td>ESYS431080</td>
+                    <td>Hệ thống nhúng</td>
+                    <td>3 (2+1)</td>
+                    <td>Hữu ích để hiểu về bảo mật và kết nối cho thiết bị IoT, thiết bị mạng. [cite: 43]</td>
+                </tr>
+                <tr>
+                    <td>FOIT331380</td>
+                    <td>Lý thuyết thông tin</td>
+                    <td>3 (2+1)</td>
+                    <td>Cung cấp nền tảng về mã hóa và sửa lỗi trong truyền tin. [cite: 43]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>VI. Kiến thức chuyên ngành tự chọn (thuộc Mạng và An ninh mạng) (chọn 2 học phần, 6 Tín chỉ)</h3>
+        <p><em>(Lựa chọn tối ưu cho chuyên ngành Mạng và An ninh mạng)</em></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã môn học</th>
+                    <th>Tên học phần</th>
+                    <th>Số tín chỉ</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>WISE432380</td>
+                    <td>An toàn mạng không dây và di động</td>
+                    <td>3 (2+1)</td>
+                    <td>Chuyên sâu về bảo mật các hệ thống mạng không dây. [cite: 45]</td>
+                </tr>
+                <tr>
+                    <td>DIFO432180</td>
+                    <td>Pháp lý kỹ thuật số</td>
+                    <td>3 (2+1)</td>
+                    <td>Kỹ năng thu thập chứng cứ và phân tích báo cáo pháp lý số, quan trọng cho an ninh. [cite: 45]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="total-credits">
+            Tổng cộng: 150 Tín chỉ
+        </div>
+    </div>
+</body>
+</html>
+          <tr>
+            <td>FOIT331380</td>
+            <td>Lý thuyết thông tin</td>
+            <td>3 (2+1)</td>
+            <td>
+              Cung cấp nền tảng về mã hóa và sửa lỗi trong truyền tin. [cite:
+              43]
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>
+        VI. Kiến thức chuyên ngành tự chọn (thuộc Mạng và An ninh mạng) (chọn 2
+        học phần, 6 Tín chỉ)
+      </h3>
+      <p><em>(Lựa chọn tối ưu cho chuyên ngành Mạng và An ninh mạng)</em></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Mã môn học</th>
+            <th>Tên học phần</th>
+            <th>Số tín chỉ</th>
+            <th>Ghi chú</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>WISE432380</td>
+            <td>An toàn mạng không dây và di động</td>
+            <td>3 (2+1)</td>
+            <td>
+              Chuyên sâu về bảo mật các hệ thống mạng không dây. [cite: 45]
+            </td>
+          </tr>
+          <tr>
+            <td>DIFO432180</td>
+            <td>Pháp lý kỹ thuật số</td>
+            <td>3 (2+1)</td>
+            <td>
+              Kỹ năng thu thập chứng cứ và phân tích báo cáo pháp lý số, quan
+              trọng cho an ninh. [cite: 45]
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="total-credits">Tổng cộng: 150 Tín chỉ</div>
+    </div>
+  </body>
+</html>
