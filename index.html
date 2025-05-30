@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="Logo HCMUTE_Stroke white.png" />
+    <title>Bài Trắc Nghiệm Chọn Chuyên Ngành CNTT</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 20px;
+        background-color: #f4f7f6;
+        color: #333;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 800px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      .banner {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto 30px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      .banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      h1,
+      h2 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .question-group {
+        margin-bottom: 25px;
+        border-bottom: 1px dashed #e0e0e0;
+        padding-bottom: 20px;
+      }
+      .question-group:last-child {
+        border-bottom: none;
+      }
+      .question {
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #34495e;
+      }
+      .options label {
+        display: block;
+        margin-bottom: 10px;
+        cursor: pointer;
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        transition: background-color 0.2s, border-color 0.2s;
+      }
+      .options label:hover {
+        background-color: #f0f0f0;
+        border-color: #c0c0c0;
+      }
+      .options input[type="radio"] {
+        margin-right: 10px;
+        transform: scale(1.2);
+        vertical-align: middle;
+      }
+      button {
+        display: block;
+        width: 200px;
+        padding: 12px 20px;
+        margin: 30px auto 0;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #2980b9;
+      }
+      .result {
+        margin-top: 40px;
+        padding: 25px;
+        background-color: #e8f6f3;
+        border: 1px solid #d4edda;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 1.1em;
+        color: #155724;
+        display: none; /* Hidden by default */
+      }
+      .result h3 {
+        color: #28a745;
+        margin-bottom: 15px;
+      }
+      .result p {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="banner">
+        <a href="https://hcmute.edu.vn/" target="_blank">
+          <img src="Logo HCMUTE Tagline 1_Stroke white.png" alt="Logo HCMUTE" />
+        </a>
+      </div>
+      <h1>Bài Trắc Nghiệm Chọn Chuyên Ngành CNTT</h1>
+      <p style="text-align: center; margin-bottom: 30px">
+        Hãy chọn đáp án mà bạn cảm thấy đúng nhất với bản thân, không cần suy
+        nghĩ quá nhiều nhé!
+      </p>
+
+      <form id="quizForm">
+        <div class="question-group">
+          <h2>Phần 1: Sở thích và Tư duy làm việc</h2>
+          <div class="question">
+            1. Khi gặp một vấn đề phức tạp, bạn có xu hướng:
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q1" value="a" /> a) Tìm kiếm giải pháp
+              có sẵn, hoặc sử dụng các công cụ, framework đã có để nhanh chóng
+              xây dựng sản phẩm. <br /><span
+                style="color: #666; font-size: 0.9em"
+                >Ví dụ: Sử dụng React, Angular để xây dựng website, Flutter để
+                làm app di động!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q1" value="b" /> b) Thích tìm hiểu sâu
+              về cách thức hoạt động của hệ thống bên dưới, phân tích nguyên
+              nhân gốc rễ và tối ưu hiệu suất. <br /><span
+                style="color: #666; font-size: 0.9em"
+                >Ví dụ: Tìm hiểu về cách hoạt động của Docker, Kubernetes, cách
+                tối ưu database!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q1" value="c" /> c) Tập trung vào việc
+              thu thập, tổ chức và phân tích dữ liệu để tìm ra các mẫu hình, xu
+              hướng và đưa ra quyết định. <br /><span
+                style="color: #666; font-size: 0.9em"
+                >Ví dụ: Phân tích dữ liệu người dùng, xây dựng mô hình dự đoán
+                xu hướng!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q1" value="d" /> d) Quan tâm đến việc
+              thiết kế luồng thông tin, đảm bảo dữ liệu được lưu trữ, xử lý và
+              truyền tải hiệu quả, an toàn. <br /><span
+                style="color: #666; font-size: 0.9em"
+                >Ví dụ: Thiết kế hệ thống quản lý thông tin, quy trình xử lý dữ
+                liệu!</span
+              >
+            </label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question">
+            2. Trong một dự án nhóm, vai trò nào sau đây hấp dẫn bạn nhất?
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q2" value="a" /> a) Người trực tiếp viết
+              mã, phát triển các tính năng và đảm bảo sản phẩm hoạt động trơn
+              tru. <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: Lập trình viên Frontend, Backend, Mobile
+                Developer!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q2" value="b" /> b) Người chịu trách
+              nhiệm về hạ tầng, đảm bảo hệ thống vận hành ổn định, an toàn và có
+              khả năng mở rộng. <br /><span
+                style="color: #666; font-size: 0.9em"
+                >Ví dụ: DevOps Engineer, System Administrator, Security
+                Engineer!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q2" value="c" /> c) Người phân tích dữ
+              liệu, tạo ra báo cáo và đưa ra các insight giúp đội ngũ đưa ra
+              quyết định tốt hơn. <br /><span
+                style="color: #666; font-size: 0.9em"
+                >Ví dụ: Data Analyst, Data Scientist, Business Intelligence
+                Analyst!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q2" value="d" /> d) Người thiết kế cấu
+              trúc tổng thể của hệ thống, luồng dữ liệu và đảm bảo các thành
+              phần tích hợp tốt với nhau. <br /><span
+                style="color: #666; font-size: 0.9em"
+                >Ví dụ: System Architect, Database Administrator, IT
+                Consultant!</span
+              >
+            </label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question">3. Bạn thích học hỏi về điều gì nhất?</div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q3" value="a" /> a) Các ngôn ngữ lập
+              trình mới, framework, thư viện và cách xây dựng ứng dụng nhanh
+              chóng. <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: JavaScript, Python, Java, React, Node.js, Spring
+                Boot!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q3" value="b" /> b) Cấu trúc máy tính,
+              hệ điều hành, giao thức mạng, các phương pháp bảo mật và cách
+              chúng hoạt động. <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: Linux, Docker, Kubernetes, Network Protocols, Security
+                Tools!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q3" value="c" /> c) Thuật toán, mô hình
+              thống kê, cách máy tính học từ dữ liệu và đưa ra dự đoán.
+              <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: Machine Learning, Deep Learning, Data Mining,
+                Statistical Analysis!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q3" value="d" /> d) Cách tổ chức thông
+              tin, tối ưu hóa truy xuất dữ liệu, đảm bảo tính toàn vẹn và bảo
+              mật dữ liệu. <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: Database Design, Data Modeling, Information
+                Systems!</span
+              >
+            </label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question">
+            4. Khi làm việc với máy tính, bạn cảm thấy hứng thú nhất với:
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q4" value="a" /> a) Viết code để tạo ra
+              các phần mềm, ứng dụng có giao diện đẹp và dễ sử dụng. <br /><span
+                style="color: #666; font-size: 0.9em"
+                >Ví dụ: Xây dựng website thương mại điện tử, ứng dụng quản lý
+                nhà hàng!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q4" value="b" /> b) Cấu hình router,
+              server, bảo mật hệ thống, hoặc tìm hiểu về các lỗ hổng bảo mật.
+              <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: Cấu hình firewall, phát hiện và vá lỗ hổng bảo
+                mật!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q4" value="c" /> c) Phân tích các tập dữ
+              liệu lớn, xây dựng mô hình dự đoán hoặc hệ thống khuyến nghị.
+              <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: Xây dựng hệ thống gợi ý sản phẩm, dự đoán xu hướng thị
+                trường!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q4" value="d" /> d) Thiết kế cơ sở dữ
+              liệu, quản lý thông tin và đảm bảo thông tin được truyền tải mạch
+              lạc. <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: Thiết kế hệ thống quản lý nhân sự, quản lý kho!</span
+              >
+            </label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question">
+            5. Bạn nghĩ gì về vai trò của toán học và thuật toán trong công
+            việc?
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q5" value="a" /> a) Là công cụ cần thiết
+              để giải quyết các vấn đề lập trình, nhưng không cần quá chuyên
+              sâu. <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: Sử dụng các thuật toán cơ bản để tối ưu code, xử lý dữ
+                liệu!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q5" value="b" /> b) Rất quan trọng để
+              hiểu sâu về cách hoạt động của hệ thống, tối ưu hiệu suất và bảo
+              mật. <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: Phân tích độ phức tạp thuật toán, tối ưu hiệu năng hệ
+                thống!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q5" value="c" /> c) Cực kỳ quan trọng,
+              là nền tảng để phát triển các mô hình học máy và phân tích dữ liệu
+              phức tạp. <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: Xây dựng thuật toán học máy, phân tích thống kê nâng
+                cao!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q5" value="d" /> d) Quan trọng trong
+              việc thiết kế cấu trúc dữ liệu và tối ưu hóa các quy trình xử lý
+              thông tin. <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: Thiết kế cấu trúc dữ liệu hiệu quả, tối ưu truy
+                vấn!</span
+              >
+            </label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <h2>Phần 2: Mức độ quan tâm đến các khía cạnh công nghệ</h2>
+          <div class="question">
+            6. Bạn quan tâm đến việc tạo ra các sản phẩm người dùng cuối có thể
+            tương tác trực tiếp (ví dụ: ứng dụng điện thoại, website) hay các hệ
+            thống chạy nền (ví dụ: database, server) hơn?
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q6" value="a" /> a) Sản phẩm tương tác
+              trực tiếp. <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: Website, ứng dụng di động, phần mềm desktop!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q6" value="b" /> b) Hệ thống chạy nền.
+              <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: Server, database, hệ thống bảo mật!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q6" value="c" /> c) Cả hai, miễn là có
+              thể phân tích và học hỏi từ dữ liệu người dùng. <br /><span
+                style="color: #666; font-size: 0.9em"
+                >Ví dụ: Hệ thống phân tích hành vi người dùng, dự đoán xu
+                hướng!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q6" value="d" /> d) Cả hai, miễn là đảm
+              bảo luồng thông tin và hoạt động hiệu quả. <br /><span
+                style="color: #666; font-size: 0.9em"
+                >Ví dụ: Hệ thống quản lý doanh nghiệp, quản lý thông tin!</span
+              >
+            </label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question">
+            7. Bạn có muốn tìm hiểu về cách bảo vệ hệ thống khỏi các cuộc tấn
+            công mạng, mã hóa dữ liệu và đảm bảo an toàn thông tin không?
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q7" value="a" /> a) Không quá nhiều, tôi
+              thích tạo ra cái gì đó mới hơn. <br /><span
+                style="color: #666; font-size: 0.9em"
+                >Ví dụ: Tập trung vào phát triển tính năng mới, cải tiến sản
+                phẩm!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q7" value="b" /> b) Có, tôi rất quan tâm
+              đến các khía cạnh bảo mật và an toàn thông tin. <br /><span
+                style="color: #666; font-size: 0.9em"
+                >Ví dụ: Phân tích bảo mật, phát hiện và ngăn chặn tấn
+                công!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q7" value="c" /> c) Có, đặc biệt là cách
+              dữ liệu được bảo mật và khai thác một cách an toàn. <br /><span
+                style="color: #666; font-size: 0.9em"
+                >Ví dụ: Bảo mật dữ liệu, mã hóa thông tin nhạy cảm!</span
+              >
+            </label>
+            <label>
+              <input type="radio" name="q7" value="d" /> d) Có, việc này rất
+              quan trọng để đảm bảo tính toàn vẹn của hệ thống thông tin.
+              <br /><span style="color: #666; font-size: 0.9em"
+                >Ví dụ: Quản lý rủi ro, đảm bảo tính liên tục của hệ
+                thống!</span
+              >
+            </label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question">
+            8. Bạn có kiên nhẫn để làm việc với các tập dữ liệu khổng lồ, tìm
+            kiếm các mối liên hệ và xây dựng các mô hình dự đoán không?
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q8" value="a" /> a) Tôi thích làm việc
+              với dữ liệu, nhưng có thể không phải là ưu tiên hàng đầu.
+            </label>
+            <label>
+              <input type="radio" name="q8" value="b" /> b) Không phải sở trường
+              của tôi.
+            </label>
+            <label>
+              <input type="radio" name="q8" value="c" /> c) Tuyệt vời! Tôi rất
+              thích làm việc với dữ liệu để khám phá những điều mới.
+            </label>
+            <label>
+              <input type="radio" name="q8" value="d" /> d) Tôi quan tâm đến
+              việc quản lý dữ liệu, nhưng không nhất thiết phải phân tích sâu.
+            </label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question">
+            9. Bạn có thích tìm hiểu về cách các thiết bị giao tiếp với nhau,
+            cách xây dựng một mạng lưới và quản lý lưu lượng truy cập không?
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q9" value="a" /> a) Không thực sự hứng
+              thú.
+            </label>
+            <label>
+              <input type="radio" name="q9" value="b" /> b) Rất hứng thú, đó là
+              nền tảng của mọi hệ thống.
+            </label>
+            <label>
+              <input type="radio" name="q9" value="c" /> c) Có, đặc biệt là khi
+              các thiết bị này tạo ra dữ liệu để phân tích.
+            </label>
+            <label>
+              <input type="radio" name="q9" value="d" /> d) Có, việc này liên
+              quan trực tiếp đến việc tổ chức và truyền tải thông tin.
+            </label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question">
+            10. Bạn có thích nghiên cứu và tìm hiểu về các thuật toán phức tạp,
+            cách máy tính "suy nghĩ" và học hỏi từ kinh nghiệm không?
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q10" value="a" /> a) Có, nhưng tôi thích
+              áp dụng hơn là nghiên cứu sâu về lý thuyết.
+            </label>
+            <label>
+              <input type="radio" name="q10" value="b" /> b) Có, nếu nó liên
+              quan đến việc tối ưu hóa hiệu suất hoặc bảo mật.
+            </label>
+            <label>
+              <input type="radio" name="q10" value="c" /> c) Rất thích! Đó là
+              lĩnh vực tôi muốn theo đuổi.
+            </label>
+            <label>
+              <input type="radio" name="q10" value="d" /> d) Quan tâm ở mức độ
+              khái niệm, không chuyên sâu về việc xây dựng thuật toán.
+            </label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <h2>Phần 3: Kỹ năng và Mục tiêu nghề nghiệp</h2>
+          <div class="question">
+            11. Bạn thích làm việc với loại dự án nào hơn?
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q11" value="a" /> a) Xây dựng ứng dụng
+              mới từ đầu, hoặc thêm các tính năng mới vào ứng dụng hiện có.
+            </label>
+            <label>
+              <input type="radio" name="q11" value="b" /> b) Triển khai, cấu
+              hình và duy trì các máy chủ, mạng lưới, hoặc hệ thống bảo mật phức
+              tạp.
+            </label>
+            <label>
+              <input type="radio" name="q11" value="c" /> c) Phát triển các mô
+              hình dự đoán, hệ thống nhận diện, hoặc các giải pháp tự động hóa
+              thông minh.
+            </label>
+            <label>
+              <input type="radio" name="q11" value="d" /> d) Thiết kế cơ sở dữ
+              liệu, tối ưu hóa quy trình nghiệp vụ bằng công nghệ thông tin.
+            </label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question">
+            12. Mục tiêu nghề nghiệp lý tưởng của bạn liên quan đến:
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q12" value="a" /> a) Trở thành kiến trúc
+              sư phần mềm, quản lý dự án phần mềm, hoặc chuyên gia phát triển
+              ứng dụng cao cấp.
+            </label>
+            <label>
+              <input type="radio" name="q12" value="b" /> b) Trở thành chuyên
+              gia an ninh mạng, quản trị hệ thống, hoặc kỹ sư DevOps.
+            </label>
+            <label>
+              <input type="radio" name="q12" value="c" /> c) Trở thành nhà khoa
+              học dữ liệu, kỹ sư học máy, hoặc nhà nghiên cứu AI.
+            </label>
+            <label>
+              <input type="radio" name="q12" value="d" /> d) Trở thành chuyên
+              viên phân tích hệ thống, quản lý cơ sở dữ liệu, hoặc tư vấn giải
+              pháp CNTT cho doanh nghiệp.
+            </label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question">
+            13. Bạn cảm thấy thoải mái nhất khi giải quyết vấn đề bằng cách nào?
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q13" value="a" /> a) Viết code và debug
+              để tìm ra lỗi và cải thiện chức năng.
+            </label>
+            <label>
+              <input type="radio" name="q13" value="b" /> b) Sử dụng các công cụ
+              chẩn đoán, phân tích log để tìm ra nguyên nhân và khắc phục sự cố
+              hệ thống.
+            </label>
+            <label>
+              <input type="radio" name="q13" value="c" /> c) Xây dựng và kiểm
+              tra các mô hình, thuật toán để xem chúng có thể dự đoán hoặc phân
+              loại tốt như thế nào.
+            </label>
+            <label>
+              <input type="radio" name="q13" value="d" /> d) Phân tích các quy
+              trình hiện tại, xác định điểm nghẽn và đề xuất các giải pháp công
+              nghệ để cải thiện.
+            </label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question">
+            14. Bạn có hứng thú với việc liên tục học hỏi các công nghệ mới,
+            framework và ngôn ngữ lập trình không?
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q14" value="a" /> a) Rất hứng thú, việc
+              cập nhật công nghệ mới là điều cần thiết.
+            </label>
+            <label>
+              <input type="radio" name="q14" value="b" /> b) Có, đặc biệt là các
+              công nghệ liên quan đến hạ tầng và bảo mật.
+            </label>
+            <label>
+              <input type="radio" name="q14" value="c" /> c) Có, đặc biệt là các
+              thuật toán và mô hình học máy mới.
+            </label>
+            <label>
+              <input type="radio" name="q14" value="d" /> d) Có, để có thể áp
+              dụng các giải pháp mới vào hệ thống thông tin.
+            </label>
+          </div>
+        </div>
+
+        <div class="question-group">
+          <div class="question">
+            15. Bạn có thích làm việc với dữ liệu có cấu trúc (ví dụ: bảng trong
+            database) hay dữ liệu phi cấu trúc (ví dụ: văn bản, hình ảnh, âm
+            thanh) hơn?
+          </div>
+          <div class="options">
+            <label>
+              <input type="radio" name="q15" value="a" /> a) Chủ yếu là dữ liệu
+              có cấu trúc, nhưng cũng có thể làm việc với dữ liệu phi cấu trúc
+              khi cần.
+            </label>
+            <label>
+              <input type="radio" name="q15" value="b" /> b) Dữ liệu có cấu
+              trúc, đặc biệt là trong việc quản lý log và thông tin hệ thống.
+            </label>
+            <label>
+              <input type="radio" name="q15" value="c" /> c) Rất hứng thú với cả
+              hai, đặc biệt là cách trích xuất thông tin từ dữ liệu phi cấu
+              trúc.
+            </label>
+            <label>
+              <input type="radio" name="q15" value="d" /> d) Dữ liệu có cấu
+              trúc, tập trung vào việc thiết kế và quản lý cơ sở dữ liệu.
+            </label>
+          </div>
+        </div>
+
+        <button type="button" onclick="calculateResult()">Xem kết quả</button>
+      </form>
+
+      <div id="resultContainer" class="result">
+        <h3>Chuyên ngành phù hợp với bạn là:</h3>
+        <p id="majorResult"></p>
+        <p id="majorDescription"></p>
+        <p style="margin-top: 20px">
+          <a
+            href="https://fit.hcmute.edu.vn/ArticleId/df646c13-b76f-444d-a1d1-95ccdfd50b47/"
+            target="_blank"
+            style="color: #2980b9; text-decoration: none; font-weight: bold"
+          >
+            → Xem thông tin chi tiết chương trình đào tạo chuyên ngành CNTT
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function calculateResult() {
+        const questions = 10;
+        const choices = { a: 0, b: 0, c: 0, d: 0 };
+        let allAnswered = true;
+
+        for (let i = 1; i <= questions; i++) {
+          const selectedOption = document.querySelector(
+            `input[name="q${i}"]:checked`
+          );
+          if (selectedOption) {
+            choices[selectedOption.value]++;
+          } else {
+            allAnswered = false;
+          }
+        }
+
+        if (!allAnswered) {
+          alert("Vui lòng trả lời tất cả các câu hỏi trước khi xem kết quả!");
+          return;
+        }
+
+        let maxCount = 0;
+        let recommendedMajor = "";
+        let majorDescription = "";
+
+        // Find the most frequent choice
+        for (const choice in choices) {
+          if (choices[choice] > maxCount) {
+            maxCount = choices[choice];
+            recommendedMajor = choice;
+          } else if (choices[choice] === maxCount) {
+            // Handle ties, could combine or pick one as primary
+            // For simplicity, if there's a tie, we might just pick the first one, or indicate a broader interest
+            // For this quiz, let's keep it simple and suggest the one with the highest count,
+            // or default to 'a' if multiple have the same max count.
+            // A more complex quiz would need more sophisticated tie-breaking logic.
+          }
+        }
+
+        // Define major details based on the recommendedMajor
+        switch (recommendedMajor) {
+          case "a":
+            majorResult = "Công nghệ Phần mềm (CNPM)";
+            majorDescription =
+              "Bạn có xu hướng phù hợp với việc phát triển ứng dụng, tạo ra sản phẩm cụ thể và sử dụng các công nghệ hiện đại. Bạn thích trực tiếp xây dựng và thấy kết quả công việc của mình.";
+            break;
+          case "b":
+            majorResult = "Mạng và An ninh mạng";
+            majorDescription =
+              "Bạn hứng thú với hạ tầng, cách hệ thống vận hành, bảo mật và khả năng tối ưu hóa. Bạn quan tâm đến việc đảm bảo sự ổn định và an toàn cho các hệ thống công nghệ.";
+            break;
+          case "c":
+            majorResult = "Trí tuệ nhân tạo (TTNT)";
+            majorDescription =
+              "Bạn đam mê dữ liệu, thuật toán, mô hình học máy và muốn khám phá tiềm năng của AI. Bạn có khả năng kiên nhẫn làm việc với các tập dữ liệu lớn và tìm kiếm insight từ chúng.";
+            break;
+          case "d":
+            majorResult = "Hệ thống Thông tin (HTTT)";
+            majorDescription =
+              "Bạn quan tâm đến việc tổ chức, quản lý và tối ưu hóa luồng thông tin trong các tổ chức, đảm bảo hiệu quả và tính toàn vẹn của dữ liệu. Bạn thích thiết kế và quản lý các cấu trúc thông tin.";
+            break;
+          default:
+            majorResult =
+              "Không xác định rõ. Vui lòng thử lại hoặc xem xét các chuyên ngành kỹ hơn.";
+            majorDescription = "";
+            break;
+        }
+
+        document.getElementById("majorResult").textContent = majorResult;
+        document.getElementById("majorDescription").textContent =
+          majorDescription;
+        document.getElementById("resultContainer").style.display = "block"; // Show the result
+        document
+          .getElementById("quizForm")
+          .scrollIntoView({ behavior: "smooth", block: "end" }); // Scroll to result
+      }
+    </script>
+  </body>
+</html>
